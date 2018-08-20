@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hp.trackyourlife.addNewEntry">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorAccent"
+        android:elevation="7dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/page2_title"
+        app:titleTextAppearance="@style/yourstyle" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:hint="Name"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Duration" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editText5"
+            android:layout_toRightOf="@+id/textView5"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="100dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView5"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:text="From"
+            android:onClick="showFromDateDialog" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/spinner"
+            android:layout_alignRight = "@+id/button5"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="37dp"
+            android:text="To"
+            android:onClick="showToDateDialog" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/button5"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="5"
+            android:hint="firstDay"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/editText4"
+            android:layout_below="@+id/button4"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp"
+            android:ems="5"
+            android:hint="lastDay"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="4"
+            android:focusableInTouchMode="false"
+            android:hint="time1"
+            android:inputType="time"
+            android:onClick="showTimeDialog" />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/editText8"
+            android:ems="4"
+            android:focusableInTouchMode="false"
+            android:hint="time2"
+            android:inputType="time"
+            android:onClick="showTimeDialog" />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/editText9"
+            android:layout_below="@+id/editText7"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:ems="4"
+            android:focusableInTouchMode="false"
+            android:hint="time3"
+            android:inputType="time"
+            android:onClick="showTimeDialog" />
+
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

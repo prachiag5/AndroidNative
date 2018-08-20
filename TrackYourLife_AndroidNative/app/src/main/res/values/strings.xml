@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TrackYourLife</string>
+    <string name="textview_title">Track Your Life</string>
+    <string name="button_signup">SignUp</string>
+    <string name="text_name"> Name </string>
+    <string name="text_email"> Email </string>
+    <string name="text_phone"> Mobile No </string>
+    <string name="button_submit"> Submit </string>
+    <string name="page1_title"> Task Category </string>
+    <string name="page2_title"> Medicines </string>
+</resources>
